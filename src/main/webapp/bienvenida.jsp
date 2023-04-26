@@ -1,9 +1,3 @@
-<%-- 
-    Document   : bienvenida
-    Created on : 26 abr. de 2023, 13:58:18
-    Author     : noone
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -11,7 +5,32 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
+    
     <body>
-        <h1>Hello World!JSP</h1>
+        
+        
+        <!<!-- para ma cabezera -->
+        <div>
+            <header></header>
+            <nav></nav>
+        </div>
+        
+        
+        <!<!-- seccion de bienvenida -->
+        <section></section>
+        
+        <!<!-- seccion de galeria -->
+        <section></section>
+        
+        <!<!-- seccion de lugares cercanos -->
+        <section></section>
+        
+        
+        <!<!-- footer -->
+        <footer></footer>
+        
+        
+    
     </body>
+    
 </html>
