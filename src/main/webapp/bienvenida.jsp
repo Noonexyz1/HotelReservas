@@ -8,29 +8,8 @@
     
     <body>
         
+        <h1>Hola jsp</h1>
         
-        <!<!-- para ma cabezera -->
-        <div>
-            <header></header>
-            <nav></nav>
-        </div>
-        
-        
-        <!<!-- seccion de bienvenida -->
-        <section></section>
-        
-        <!<!-- seccion de galeria -->
-        <section></section>
-        
-        <!<!-- seccion de lugares cercanos -->
-        <section></section>
-        
-        
-        <!<!-- footer -->
-        <footer></footer>
-        
-        
-    
     </body>
     
 </html>
