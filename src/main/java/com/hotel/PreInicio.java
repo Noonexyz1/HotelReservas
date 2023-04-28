@@ -29,12 +29,29 @@ public class PreInicio extends HttpServlet {
         try {
             out.println("<h1>" + con.getConexion().getSchema().concat("asdfasdfasdf") + "</h1>");
             
-            
             //redirigimos a la ventana de bienvenida
             //response.sendRedirect("bienvenida.jsp");
         } catch (SQLException ex) {
             Logger.getLogger(PreInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        
+        /*
+        La primera vez que ejecutamos la aplicacion con el servidor detenido
+        hace la connecion pero...
+        la segunda vez, me indica que la base de datos ya sido creada y me 
+        brinca un error seguido de una pantalla blanca.
+        El objeto que me devuelve de la base de datos me viene
+        como PUBLIC
+        
+        La ruta de la conexion con la base de datos es la misma ruta que del String de la 
+        clase de Conexion.
+        En mi proyecto ya tengo la bse de datos creada con una tabla, asi que me va a mostrar
+        la misma tabla en teoria.
+        */
+        
+        //Intentemos crea el modelo que tenia en entidad relacion
+        //intentare subir con la nueva tabla creada github
         
     }
 
