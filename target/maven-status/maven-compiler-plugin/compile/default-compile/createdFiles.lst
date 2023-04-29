@@ -1,2 +1,2 @@
-com\hotel\PreInicio.class
-com\hotel\Conexion.class
+com\hotel\controllers\PreInicio.class
+com\hotel\conections\Conexion.class
