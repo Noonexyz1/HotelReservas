@@ -1,5 +1,6 @@
-package com.hotel;
+package com.hotel.controllers;
 
+import com.hotel.conections.Conexion;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;

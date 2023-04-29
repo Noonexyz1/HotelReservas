@@ -1,5 +1,5 @@
 
-package com.hotel;
+package com.hotel.conections;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
