@@ -42,7 +42,8 @@ public class PreInicio extends HttpServlet {
         la segunda vez, me indica que la base de datos ya sido creada y me 
         brinca un error seguido de una pantalla blanca.
 
-Eso es porque al iniciar conexión con la base de datos, no lo estoy cerrando, por ello, me brinca el error que ya tengo una base de datos.
+        Eso es porque al iniciar conexión con la base de datos, no lo estoy
+        cerrando, por ello, me brinca el error que ya tengo una base de datos.
 
         El objeto que me devuelve de la base de datos me viene
         como PUBLIC
@@ -54,7 +55,10 @@ Eso es porque al iniciar conexión con la base de datos, no lo estoy cerrando, p
         */
         
         //Intentemos crea el modelo que tenia en entidad relacion
-        //intentare subir con la nueva tabla creada github
+        //intentare subir con la nueva tabla creada github LA TABLA AUN QUEDA AHI
+        //Cuando se esta ejecutando el h2, git no puede sobre-escribir por falta de permisos
+            //es como cuando eliminas un archivo pero que no puede hacerlo por tener un
+            //programa abierto
         
     }
 
