@@ -41,6 +41,9 @@ public class PreInicio extends HttpServlet {
         hace la connecion pero...
         la segunda vez, me indica que la base de datos ya sido creada y me 
         brinca un error seguido de una pantalla blanca.
+
+Eso es porque al iniciar conexión con la base de datos, no lo estoy cerrando, por ello, me brinca el error que ya tengo una base de datos.
+
         El objeto que me devuelve de la base de datos me viene
         como PUBLIC
         
