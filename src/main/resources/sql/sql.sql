@@ -7,10 +7,6 @@ CREATE TABLE empleado (
   telefono VARCHAR(20),
   email VARCHAR(100),
   direccion VARCHAR(100),
-  ciudad VARCHAR(50),
-  estado VARCHAR(50),
-  pais VARCHAR(50),
-  codigo_postal VARCHAR(20),
   puesto VARCHAR(50) NOT NULL,
   fecha_contratacion DATE NOT NULL,
   salario DECIMAL(10, 2) NOT NULL
@@ -29,7 +25,6 @@ CREATE TABLE habitacion (
     tipo VARCHAR(50) NOT NULL,
     descripcion VARCHAR(255),
     capacidad INT NOT NULL,
-    precio DECIMAL(10, 2) NOT NULL,
     disponible BOOLEAN NOT NULL,
     fecha_ultima_mantenimiento DATE,
     observaciones VARCHAR(255),
@@ -47,21 +42,10 @@ CREATE TABLE empleado_huesped (
     fk_empleado INT,
     fk_huesped INT,
 
-    nombre VARCHAR(50) NOT NULL,
-    apellidos VARCHAR(50) NOT NULL,
-    correo_electronico VARCHAR(50),
-    telefono VARCHAR(20),
-    fecha_nacimiento DATE,
-    nacionalidad VARCHAR(50),
-    direccion VARCHAR(100),
-    ciudad VARCHAR(50),
-    pais VARCHAR(50),
-    codigo_postal VARCHAR(10),
-    tipo_documento VARCHAR(20),
-    numero_documento VARCHAR(20),
+    
+    fecha_atencion DATE,
     fecha_llegada DATE,
     fecha_salida DATE,
-    habitacion_id INT,
 
     FOREIGN KEY (fk_empleado) REFERENCES empleado(id_empleado),
     FOREIGN KEY (fk_huesped) REFERENCES huesped(id_huesped)
@@ -74,18 +58,12 @@ CREATE TABLE huesped (
   nombre VARCHAR(50) NOT NULL,
   apellidos VARCHAR(50) NOT NULL,
   correo_electronico VARCHAR(50),
-  telefono VARCHAR(20),
-  fecha_nacimiento DATE,
+  
   nacionalidad VARCHAR(50),
   direccion VARCHAR(100),
   ciudad VARCHAR(50),
   pais VARCHAR(50),
-  codigo_postal VARCHAR(10),
-  tipo_documento VARCHAR(20),
-  numero_documento VARCHAR(20),
-  fecha_llegada DATE,
-  fecha_salida DATE,
-  habitacion_id INT
+  codigo_postal VARCHAR(10)
 
 );
 
@@ -103,9 +81,6 @@ CREATE TABLE reserva (
 
     fecha_inicio DATE NOT NULL,
     fecha_fin DATE NOT NULL,
-    id_habitacion INT NOT NULL,
-    id_huesped INT NOT NULL,
-    precio DECIMAL(10, 2) NOT NULL,
 
     FOREIGN KEY (fk_huesped) REFERENCES huesped(id_habitacion),
     FOREIGN KEY (fk_comentario) REFERENCES comentario(id_comentario),
@@ -120,10 +95,7 @@ CREATE TABLE tarifa (
   id_tarifa INT PRIMARY KEY AUTO_INCREMENT,
   tipo VARCHAR(50) NOT NULL,
   precio DOUBLE NOT NULL,
-  descripcion VARCHAR(255),
-  fecha_inicio DATE,
-  fecha_fin DATE
-
+  descripcion VARCHAR(255)
 );
 
 
@@ -136,8 +108,6 @@ CREATE TABLE servicio (
 
 CREATE TABLE comentario (
   id_comentario INT PRIMARY KEY,
-  id_huesped INT NOT NULL,
-  id_habitacion INT NOT NULL,
   comentario TEXT NOT NULL,
   fecha_comentario DATE NOT NULL
 );
@@ -147,8 +117,7 @@ CREATE TABLE Pago (
   id_pago INT PRIMARY KEY AUTO_INCREMENT,
   fecha DATE NOT NULL,
   monto DECIMAL(10,2) NOT NULL,
-  tipo_pago VARCHAR(50) NOT NULL,
-  reserva_id INT NOT NULL
+  tipo_pago VARCHAR(50) NOT NULL
 
 );
 
